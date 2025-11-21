@@ -32,8 +32,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email to company
     const companyEmailResponse = await resend.emails.send({
-      from: "Erkina Trading Orders <onboarding@resend.dev>",
-      to: ["orders@erkinatrading.com"], // Replace with your actual email
+      from: "Erkina Papers Orders <onboarding@resend.dev>",
+      to: ["erkinapapers@gmail.com"], 
       subject: `New Order from ${orderData.name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -56,7 +56,7 @@ const handler = async (req: Request): Promise<Response> => {
           </div>
 
           <p style="color: #6b7280; font-size: 14px; margin-top: 30px;">
-            This order was submitted through the Erkina Trading website.
+            This order was submitted through the Erkina Papers website.
           </p>
         </div>
       `,
@@ -66,9 +66,9 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation email to customer
     const customerEmailResponse = await resend.emails.send({
-      from: "Erkina Trading <onboarding@resend.dev>",
+      from: "Erkina Papers <onboarding@resend.dev>",
       to: [orderData.email],
-      subject: "Order Confirmation - Erkina Trading",
+      subject: "Order Confirmation - Erkina Papers",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h1 style="color: #2563eb; border-bottom: 3px solid #2563eb; padding-bottom: 10px;">
@@ -77,7 +77,7 @@ const handler = async (req: Request): Promise<Response> => {
           
           <p>Dear ${orderData.name},</p>
           
-          <p>Thank you for choosing Erkina Trading. We have received your order and will process it shortly.</p>
+          <p>Thank you for choosing Erkina Papers. We have received your order and will process it shortly.</p>
 
           <div style="background-color: #f3f4f6; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h2 style="color: #374151; margin-top: 0;">Your Order Summary</h2>
@@ -90,17 +90,17 @@ const handler = async (req: Request): Promise<Response> => {
 
           <p style="margin-top: 30px;">
             <strong>Contact Us:</strong><br/>
-            Email: info@erkinatrading.com<br/>
-            Phone: +1 (555) 123-4567
+            Email: erkinapapers@gmail.com<br/>
+            Phone: +233 559890111
           </p>
 
           <p style="color: #6b7280; font-size: 14px; margin-top: 30px;">
-            Follow us on social media @ErkinaTrading
+            Follow us on social media @ErkinaPapers
           </p>
 
           <p style="margin-top: 30px;">
             Best regards,<br/>
-            <strong>The Erkina Trading Team</strong>
+            <strong>The Erkina Papers Team</strong>
           </p>
         </div>
       `,
