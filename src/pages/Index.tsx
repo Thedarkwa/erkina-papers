@@ -83,7 +83,7 @@ const Index = () => {
         <div className="container relative mx-auto px-4">
           <div className="flex flex-col items-center text-center">
             <h1 className="mb-6 text-5xl font-bold text-primary-foreground md:text-6xl lg:text-7xl">
-              Erkina Trading
+              Erkina Papers
             </h1>
             <p className="mb-8 max-w-2xl text-xl text-primary-foreground/90 md:text-2xl">
               Premium Quality Toilet Rolls for Your Business
@@ -308,7 +308,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Phone className="h-5 w-5 text-primary" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+233559890111</span>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <MapPin className="h-5 w-5 text-primary" />
