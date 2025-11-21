@@ -195,7 +195,7 @@ const Index = () => {
                     <Input
                       id="name"
                       name="name"
-                      placeholder="John Doe"
+                      placeholder="Erkina Papers"
                       value={formData.name}
                       onChange={handleInputChange}
                       required
@@ -208,7 +208,7 @@ const Index = () => {
                       id="email"
                       name="email"
                       type="email"
-                      placeholder="john@example.com"
+                      placeholder="erkina@example.com"
                       value={formData.email}
                       onChange={handleInputChange}
                       required
@@ -223,7 +223,7 @@ const Index = () => {
                       id="phone"
                       name="phone"
                       type="tel"
-                      placeholder="+1234567890"
+                      placeholder="+2332456789"
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
@@ -262,7 +262,7 @@ const Index = () => {
                   <Input
                     id="city"
                     name="city"
-                    placeholder="New York"
+                    placeholder="Tema"
                     value={formData.city}
                     onChange={handleInputChange}
                     required
@@ -304,7 +304,7 @@ const Index = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Mail className="h-5 w-5 text-primary" />
-                  <span>info@erkinatrading.com</span>
+                  <span>erkinapapers@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Phone className="h-5 w-5 text-primary" />
@@ -312,7 +312,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span>Business District, Your City</span>
+                  <span>Tema, Accra</span>
                 </div>
               </div>
             </div>
@@ -320,11 +320,11 @@ const Index = () => {
             <div>
               <h3 className="mb-6 text-2xl font-bold text-foreground">Follow Us</h3>
               <p className="mb-4 text-muted-foreground">
-                Connect with us on social media @ErkinaTrading
+                Connect with us on social media @ErkinaPapers
               </p>
               <div className="flex gap-4">
                 <a
-                  href="https://facebook.com"
+                  href="https://facebook.com/ErkinaPapers"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground transition-transform hover:scale-110"
@@ -332,7 +332,7 @@ const Index = () => {
                   <Facebook className="h-6 w-6" />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/Erkinapapers"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground transition-transform hover:scale-110"
@@ -340,7 +340,7 @@ const Index = () => {
                   <Instagram className="h-6 w-6" />
                 </a>
                 <a
-                  href="https://twitter.com"
+                  href="https://twitter.com/erkinapapers"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground transition-transform hover:scale-110"
@@ -352,7 +352,7 @@ const Index = () => {
           </div>
 
           <div className="mt-12 border-t pt-8 text-center text-muted-foreground">
-            <p>&copy; 2025 Erkina Trading. All rights reserved.</p>
+            <p>&copy; 2025 Erkina Papers. All rights reserved.</p>
           </div>
         </div>
       </footer>
