@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Package } from "lucide-react";
+import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Package, ArrowRight, Sparkles, Shield, Leaf } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const Index = () => {
@@ -77,35 +77,86 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-secondary/30">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-32">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBackground})` }}
         />
-        <div className="absolute inset-0 bg-primary/70" />
-        <div className="container relative mx-auto px-4">
-          <div className="flex flex-col items-center text-center">
-            <h1 className="mb-6 text-5xl font-bold text-primary-foreground md:text-6xl lg:text-7xl">
-              Erkina Papers
+        
+        {/* Premium Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-transparent" />
+        
+        {/* Subtle Pattern Overlay */}
+        <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_1px_1px,_hsl(var(--primary))_1px,_transparent_0)] bg-[length:40px_40px]" />
+        
+        <div className="container relative mx-auto px-4 py-20 md:py-0">
+          <div className="max-w-3xl">
+            {/* Trust Badge */}
+            <div className="animate-slide-up mb-8">
+              <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 backdrop-blur-sm border border-primary/20 px-4 py-2 text-sm font-medium text-primary-foreground">
+                <Sparkles className="h-4 w-4" />
+                Premium Quality Since 2020
+              </span>
+            </div>
+            
+            {/* Main Headline */}
+            <h1 className="animate-slide-up-delay mb-6 text-4xl font-extrabold tracking-tight text-primary-foreground sm:text-5xl md:text-6xl lg:text-7xl">
+              Softness You Can
+              <span className="block mt-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Trust Every Day
+              </span>
             </h1>
-            <p className="mb-8 max-w-2xl text-xl text-primary-foreground/90 md:text-2xl">
-              Premium Quality Toilet Rolls for Your Business
+            
+            {/* Subheadline */}
+            <p className="animate-slide-up-delay-2 mb-8 max-w-xl text-lg leading-relaxed text-primary-foreground/80 md:text-xl">
+              Experience uncompromising quality with our premium toilet rolls. 
+              Gentle on skin, strong on performance — the everyday comfort 
+              your home, office, or hotel deserves.
             </p>
-            <p className="mb-10 max-w-3xl text-lg text-primary-foreground/80">
-              Trusted supplier of high-quality toilet tissue products. 
-              We deliver excellence, reliability, and exceptional service to businesses across the region.
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all duration-300"
-              onClick={() => document.getElementById('order-form')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Place Your Order
-            </Button>
+            
+            {/* Feature Pills */}
+            <div className="animate-slide-up-delay-2 mb-10 flex flex-wrap gap-4">
+              <div className="flex items-center gap-2 text-primary-foreground/70">
+                <Shield className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium">Dermatologist Tested</span>
+              </div>
+              <div className="flex items-center gap-2 text-primary-foreground/70">
+                <Leaf className="h-5 w-5 text-accent" />
+                <span className="text-sm font-medium">Eco-Friendly</span>
+              </div>
+              <div className="flex items-center gap-2 text-primary-foreground/70">
+                <Sparkles className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium">Ultra Soft</span>
+              </div>
+            </div>
+            
+            {/* CTA Buttons */}
+            <div className="animate-slide-up-delay-3 flex flex-wrap gap-4">
+              <Button 
+                size="lg" 
+                className="group bg-primary hover:bg-primary/90 text-primary-foreground shadow-elevated hover:shadow-medium transition-all duration-300 px-8 py-6 text-base font-semibold"
+                onClick={() => document.getElementById('order-form')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Order in Bulk
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 backdrop-blur-sm px-8 py-6 text-base font-semibold transition-all duration-300"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Contact Sales
+              </Button>
+            </div>
           </div>
         </div>
+        
+        {/* Bottom Gradient Fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </section>
 
       {/* Products Section */}
@@ -301,7 +352,7 @@ const Index = () => {
       </section>
 
       {/* Contact & Footer Section */}
-      <footer className="bg-card py-16 px-4 border-t">
+      <footer id="contact" className="bg-card py-16 px-4 border-t">
         <div className="container mx-auto">
           <div className="grid gap-12 md:grid-cols-2">
             <div>
